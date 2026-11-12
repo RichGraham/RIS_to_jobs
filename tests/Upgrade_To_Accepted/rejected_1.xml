@@ -1,0 +1,40 @@
+<Projects>
+	<Project>
+		<ProjectTitle>ABC</ProjectTitle>
+		<ProjectID>10</ProjectID>
+		<FinanceProjectCode></FinanceProjectCode>
+		<Status>Bid Unsuccessful</Status>
+		<Funder></Funder>
+		<ProjectLead>BOB JONES (mczbpj)</ProjectLead>
+		<LeadOrgUnit>Maths</LeadOrgUnit>
+	</Project>
+	<Project>
+		<ProjectTitle>XYZ - Paula Smith</ProjectTitle>
+		<ProjectID>20</ProjectID>
+		<FinanceProjectCode></FinanceProjectCode>
+		<Status>Bid Unsuccessful</Status>
+		<Funder></Funder>
+		<ProjectLead>Paula Smith (pmzpss)</ProjectLead>
+		<LeadOrgUnit>Chemistry</LeadOrgUnit>
+	</Project>
+
+	<Project>
+		<ProjectTitle>PQR</ProjectTitle>
+		<ProjectID>30</ProjectID>
+		<FinanceProjectCode></FinanceProjectCode>
+		<Status>Bid Unsuccessful</Status>
+		<Funder></Funder>
+		<ProjectLead>Paula Smith (pmzpss)</ProjectLead>
+		<LeadOrgUnit>Chemistry</LeadOrgUnit>
+	</Project>
+
+	<Project>
+		<ProjectTitle>UVW</ProjectTitle>
+		<ProjectID>40</ProjectID>
+		<FinanceProjectCode></FinanceProjectCode>
+		<Status>Submitted</Status>
+		<Funder></Funder>
+		<ProjectLead>Paula Smith (pmzpss)</ProjectLead>
+		<LeadOrgUnit>Chemistry</LeadOrgUnit>
+	</Project>
+</Projects>

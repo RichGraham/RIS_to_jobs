@@ -1,0 +1,40 @@
+<Projects>
+	<Project>
+		<ProjectTitle>Fellowship: John Doe - NIST generation</ProjectTitle>
+		<ProjectID>10</ProjectID>
+		<FinanceProjectCode></FinanceProjectCode>
+		<Status>Award Setup</Status>
+		<Funder></Funder>
+		<ProjectLead>BOB JONES (mczbpj)</ProjectLead>
+		<LeadOrgUnit>Maths</LeadOrgUnit>
+	</Project>
+	<Project>
+		<ProjectTitle>Identity and Access Management: FLF application (Paula Smith)</ProjectTitle>
+		<ProjectID>20</ProjectID>
+		<FinanceProjectCode></FinanceProjectCode>
+		<Status>Project Live</Status>
+		<Funder></Funder>
+		<ProjectLead>Paula Smith (pmzpss)</ProjectLead>
+		<LeadOrgUnit>Chemistry</LeadOrgUnit>
+	</Project>
+
+	<Project>
+		<ProjectTitle>PQR</ProjectTitle>
+		<ProjectID>30</ProjectID>
+		<FinanceProjectCode></FinanceProjectCode>
+		<Status>Award Acceptance</Status>
+		<Funder></Funder>
+		<ProjectLead>Paula Smith (pmzpss)</ProjectLead>
+		<LeadOrgUnit>Chemistry</LeadOrgUnit>
+	</Project>
+
+	<Project>
+		<ProjectTitle>UVW</ProjectTitle>
+		<ProjectID>40</ProjectID>
+		<FinanceProjectCode></FinanceProjectCode>
+		<Status>Submitted</Status>
+		<Funder></Funder>
+		<ProjectLead>Paula Smith (pmzpss)</ProjectLead>
+		<LeadOrgUnit>Chemistry</LeadOrgUnit>
+	</Project>
+</Projects>
