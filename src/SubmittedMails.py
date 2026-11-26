@@ -40,8 +40,9 @@ opted_out_PIs = list(map(str.lower, opted_out_PIs))
 
 
 class SubmittedMails:
-    def __init__(self, verbose = False):
+    def __init__(self, verbose = False, get_username_from_xml = False):
         self._verbose = verbose
+        self._get_username_from_xml = get_username_from_xml
         self._sent_emails_list = list(map(int, [ item for item in RIS.read_file_to_list(sent_emails_file) if not item.startswith('========') ]))
         self._exclude_username_list = []
         if os.path.exists("exclude_PIs.txt"):
@@ -63,7 +64,7 @@ class SubmittedMails:
 
     def _load_projects_count_roles_and_filter_eligible(self):
         for file in glob.glob("./Pro*.xlsx"):
-            myReader = RIS.ExcelReader(file, verbose = False, delete_RIS_file=False)
+            myReader = RIS.ExcelReader(file, verbose = False, delete_RIS_file=False, get_username_from_xml=self._get_username_from_xml)
             myProject = myReader.get_data_object()
 
             if self._is_eligible(myProject):

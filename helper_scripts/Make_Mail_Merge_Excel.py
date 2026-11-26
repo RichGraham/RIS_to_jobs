@@ -41,6 +41,6 @@ if __name__ == "__main__":
   args = parser.parse_args()
 
   if args.silent:
-    _ = RIS.SubmittedMails()
+    _ = RIS.SubmittedMails(get_username_from_xml = True)
   else:
-    _ = RIS.SubmittedMails(verbose=True)
+    _ = RIS.SubmittedMails(verbose=True, get_username_from_xml = True)

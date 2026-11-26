@@ -30,14 +30,26 @@ from colorist import Color
 
 _project_data_label_column = 2
 
+xml_file_name = 'MyProjects.xml'
+
 class ExcelReader:
-    def __init__(self,  RIS_report, delete_RIS_file = True, verbose = True, print_titles = False):
+    def __init__(self,  RIS_report, delete_RIS_file = True, verbose = True, print_titles = False, get_username_from_xml = False):
 
         self._initialise_workbook(RIS_report)
         self._RIS_filename = RIS_report
         self._project_data = RIS.Project_DataClass()
         self._verbose = verbose
         self._print_titles = print_titles
+        self._get_username_from_xml = get_username_from_xml
+
+
+        self._xml_usernames_finder = None
+        if self._get_username_from_xml:
+            self._xml_usernames_finder = RIS.XML_Usernames('MyProjects.xml')
+
+
+
+
         myExtractor = RIS.JobExtractor(RIS_report, verbose = self._verbose)
 
         self._project_data.roles = myExtractor.get_jobs_list()
@@ -68,6 +80,11 @@ class ExcelReader:
         raw_PI_data = self._get_cell_entry("Principal Investigator")
         self._project_data.PI_name = re.sub("[\\(\\[].*?[\\)'\\]]", "", raw_PI_data).title().strip()
         self._project_data.PI_username = re.sub("^.*\\((.*?)\\)[^\\(]*$", "\\g<1>", raw_PI_data)
+        if self._get_username_from_xml:
+            PI_name, username = self._xml_usernames_finder.get_PI_name_and_username(self._project_data.RIS_ID)
+            self._project_data.PI_username = username
+            assert PI_name.lower() == self._project_data.PI_name.lower(), f"PI name from XML ({PI_name}) does not match PI name from RIS ({self._project_data.PI_name}"
+
 
 
 

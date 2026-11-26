@@ -1,3 +1,25 @@
+#MIT License
+
+#Copyright (c) 2026 Richard S. Graham
+
+#Permission is hereby granted, free of charge, to any person obtaining a copy
+#of this software and associated documentation files (the "Software"), to deal
+#in the Software without restriction, including without limitation the rights
+#to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+#copies of the Software, and to permit persons to whom the Software is
+#furnished to do so, subject to the following conditions:
+
+#The above copyright notice and this permission notice shall be included in all
+#copies or substantial portions of the Software.
+
+#THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+#IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+#FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+#AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+#LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+#OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+#SOFTWARE.
+
 import xmltodict
 import re
 from colorist import Color
@@ -6,7 +28,7 @@ class XML_Usernames:
     def __init__(self,  xml_filename):
         self._xml_dict = _load_xml_file_usernames('MyProjects.xml')
 
-    def get_project_lead_username(self,project_id):
+    def get_PI_name_and_username(self,project_id):
         projects = self._xml_dict["Projects"]["Project"]
         # xmltodict returns a dict instead of a list when there is only one item
         if isinstance(projects, dict):
