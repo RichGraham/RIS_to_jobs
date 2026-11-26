@@ -55,6 +55,8 @@ class SubmittedMails:
         self._update_file_of_mails_already_sent()
         with open(f"{self._folder_name}/Projects.pickle", "wb") as file:
             pickle.dump(self._projects, file)
+        if self._get_username_from_xml:
+            shutil.move(RIS.xml_file_name, self._folder_name)
 
     def _make_folder(self):
         if self._verbose: # pragma: no cover
