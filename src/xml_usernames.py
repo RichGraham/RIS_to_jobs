@@ -26,7 +26,7 @@ from colorist import Color
 
 class XML_Usernames:
     def __init__(self,  xml_filename):
-        self._xml_dict = _load_xml_file_usernames('MyProjects.xml')
+        self._xml_dict = _load_xml_file_usernames(xml_filename)
 
     def get_PI_name_and_username(self,project_id):
         projects = self._xml_dict["Projects"]["Project"]

@@ -45,7 +45,7 @@ class ExcelReader:
 
         self._xml_usernames_finder = None
         if self._get_username_from_xml:
-            self._xml_usernames_finder = RIS.XML_Usernames('MyProjects.xml')
+            self._xml_usernames_finder = RIS.XML_Usernames(xml_file_name)
 
 
 
