@@ -30,7 +30,7 @@ from colorist import Color
 
 _project_data_label_column = 2
 
-xml_file_name = 'MyProjects.xml'
+xml_file_name = 'RECHURDLEsdownload.xml'
 
 class ExcelReader:
     def __init__(self,  RIS_report, delete_RIS_file = True, verbose = True, print_titles = False, get_username_from_xml = False):
